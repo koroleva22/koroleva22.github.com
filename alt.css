@@ -1,0 +1,554 @@
+@media (max-width: 1145px){
+
+#sidebar > .list-group > .list-group-item > span
+	{
+		display:none;
+	}
+#sidebar > .list-group > .list-group-item > .readMore
+	{
+		display:none;
+	}
+.btn-success
+	{
+		width: 70% !important;
+	}
+}
+
+@media (max-width: 768px) {
+	 
+   .myFlex{
+	flex-direction: column;}
+	
+	div > div> .priceTag
+	{
+	font-size: 25px;
+	}
+	.myMonths > .priceBox > .monthName
+	{
+	font-size: 15px;
+	}
+	.myMonths > .priceBox > .typeName
+	{
+	font-size: 15px;
+	}
+	#sidebar
+	{
+		display:none;
+	}
+	#downArtCont
+	{
+		display: block !important;
+	}
+	#downArtPagination
+	{
+		display: block !important;	
+	}
+	.navbar-brand
+	{
+		display:none;
+	}
+	.artBody
+	{
+		width:100% !important;
+		padding:25px;
+	}
+	
+	#koktebel
+	{
+		font-size: 50px !important;
+	}
+	.btn-success
+	{
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 884px) and (min-width: 769px)
+{
+	.myFlex > div > p
+	{
+		font-size: 13px;
+	}
+	.myFlex > div > h2
+	{
+		font-size: 20px;
+	}
+	div > div> .priceTag
+	{
+		font-size: 35px;
+	}
+	.myMonths > .priceBox > .monthName
+	{
+		font-size: 18px;
+	}
+	#sidebar > .list-group > .list-group-item > .artTitle
+	{
+		font-size:12px;
+	}
+	.btn-success
+	{
+		width: 100% !important;
+	}
+
+}
+
+
+@media (max-width: 468px) {
+  .myMonths > .priceBox
+	{
+		display: none;
+	}
+	.shadow
+	{
+		display: none;
+	}
+	.myMonths > .pricesSmall
+	{
+		display: block;
+	}
+	#koktebel
+	{
+		display: block;
+		font-size: 40px !important;
+		margin-top: 10% !important;
+	}
+	.btn
+	{
+		width: 100% !important;
+		font-size: 12px;
+	}
+	.phone
+	{
+		width: 100% !important;
+	}
+ 
+}
+
+
+body
+{
+	overflow-x: hidden;
+}
+#myCarousel
+{
+	position: relative;
+}
+#homepage-block-1
+{
+	background-color: white;
+	opacity: 0.7;
+	width: 60%;
+	height: 250%;
+	margin-top: -50%;
+	margin-left: -10%;
+	z-index: 20;
+	-moz-transform: rotate(55deg); /* Для Firefox */
+    -ms-transform: rotate(55deg); /* Для IE */
+    -webkit-transform: rotate(55deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(55deg);
+	transform: rotate(55deg);
+	position: absolute;
+	
+}
+.navbar
+{
+	border-radius: 0 !important;
+}
+#myNavbar
+{
+	margin:0; 
+	position: relative; 
+	z-index:60; 
+	border: none;
+	padding:0;
+}
+.readUs
+{
+	color: white !important;
+	background-color: black ;
+	font-size: 20px !important;
+}
+.artBody > p
+{
+	text-align: left !important;
+	display: flex;
+	margin-left: 0;
+	align-items: left;
+	justify-content: flex-start;
+	margin-top: 15px;
+}
+.carousel-inner > .item {
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.cont
+{
+	overflow: hidden;
+}
+.bigBox
+{
+	background-color: none;
+	z-index: 0;
+}
+p
+{
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+.textAncors
+{
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+
+}
+h2
+{
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+#sidebar
+{
+	position: absolute;
+	z-index: 30;
+	padding-right: 0;
+	text-align: left;
+}
+.video
+{
+	z-index: 0;
+}
+.artTitle
+{
+	font-size: 16px;
+	display: block;
+}
+.artConts
+{
+	margin-top:10px;
+}
+.artHeaders
+{
+	font-size:18px !important;
+}
+#sidebar > .list-group > .list-group-item > img
+{
+	padding: 0;
+	padding-left: 0 !important; 
+	padding-right: 10px !important;
+	margin:0;
+}
+#artHref1 #artHref2 #artHref3
+{
+	display: inline-block !important;
+}
+.homepageBox
+{
+	overflow: hidden;
+}
+.horisontal
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-size: cover;
+    background-position: center;
+}
+.vertical
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+    background-size: contain;
+    background-position: center;
+	background-repeat: no-repeat;
+ }
+li:hover
+{
+	background-color: #cfcecf;
+	opacity: 0.6;
+}
+.picture
+{
+	width: 100%;
+	padding-bottom: 75%;
+	box-sizing: padding-box;
+	max-width: none;
+}
+.phone
+{
+	margin: 0;
+ }
+.tryIt2
+{
+	height: 100%;
+	padding-bottom: 75%;
+	box-sizing: padding-box;
+	max-width: none;
+}
+.arrows
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+	padding-bottom: 2%;
+	padding-top: 2%;
+}
+.arrow2
+{
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg);
+
+}
+.articles > h2
+{
+	display: block;
+}
+.wow
+{
+	font-size: 18px;
+	color: #A10313;
+}
+.warnings
+{
+	display: none;
+	color: red;
+	font-size: 14px;
+
+}
+#success
+{
+	display: none;
+	color: green;
+
+}
+.priceBox
+{
+	margin:0; 
+	padding: 0;
+	transition: 0.25s;
+	display:inline-block;
+	position: relative;
+	border-radius: 30px 30px 30px 30px;
+	overflow: hidden;
+ 
+}
+.typeName
+{
+	font-size:20px;
+}
+.pricesSmall
+{
+	display:none;
+}
+.myMonths
+{
+	display: flex; 
+	align-items: center; 
+	padding:0; 
+	margin-top: 30px; 
+	color:white;
+}
+
+.priceTag
+{
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 50px;
+	padding-bottom: 0;
+}
+.monthName
+{
+	font-family: Lucida Console, Monaco, monospace; 
+	padding-top:0; 
+	font-size:30px;
+}
+.vintage-sep
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.stripe
+{
+	width: 100%;
+	height: 7px;
+	margin-top:5px;
+	
+}
+
+#map 
+{
+   width: 500px;
+   height: 400px;
+   border: 2px solid red;
+}
+#month3
+{
+	-ms-transform: scale(1.17,1.14); /* IE 9 */
+    -webkit-transform: scale(1.17,1.14); /* Safari */
+    transform: scale(1.17,1.14);
+	z-index: 600;
+	-moz-transform: scale(1.17,1.14); /* Для Firefox */
+    -o-transform: scale(1.17,1.14);
+
+
+}
+#month2
+{
+	-ms-transform: scale(1.14,1.09); /* IE 9 */
+    -webkit-transform: scale(1.14,1.09); /* Safari */
+    transform: scale(1.14,1.09);
+	-moz-transform: scale(1.14,1.09); /* Для Firefox */
+    -o-transform: scale(1.14,1.09);
+	z-index: 500;
+
+}
+#month4
+{
+	-ms-transform: scale(1.14,1.09); /* IE 9 */
+    -webkit-transform: scale(1.14,1.09); /* Safari */
+	-moz-transform: scale(1.14,1.09); /* Для Firefox */
+    -o-transform: scale(1.14,1.09);
+    transform: scale(1.14,1.09);
+	z-index: 500;
+
+}
+#month1
+{
+	-ms-transform: scale(1.09,1.04); /* IE 9 */
+    -webkit-transform: scale(1.09,1.04); /* Safari */
+    transform: scale(1.09,1.04);
+	-moz-transform: scale(1.09,1.04); /* Для Firefox */
+    -o-transform: scale(1.09,1.04);
+	z-index: 400;
+
+}
+#month5
+{
+	-ms-transform: scale(1.09,1.04); /* IE 9 */
+    -webkit-transform: scale(1.09,1.04); /* Safari */
+    transform: scale(1.09,1.04);
+	-moz-transform: scale(1.09,1.04); /* Для Firefox */
+    -o-transform: scale(1.09,1.04);
+	z-index: 400;
+}
+
+.shadow
+{
+	height: 100px;
+	padding:0;
+}
+.networks
+{
+	width: 35px;
+	height: 35px;
+	margin-top: 10px;
+}
+#myForm
+{
+	padding-bottom: 15px;
+}
+
+#koktebel
+{
+	position: absolute; 
+	margin-top:17%;
+	margin-left: 8%; 
+	font-size:70px;
+	z-index:30;
+	color:black;
+	font-family: 'Poiret One', cursive;
+}
+#link4_side
+{
+	display:none;
+}
+#link5_side
+{
+	display:none;
+}
+#link6_side
+{
+	display:none;
+}
+#link7_side
+{
+	display:none;
+}
+#link8_side
+{
+	display:none;
+}
+#link9_side
+{
+	display:none;
+}
+#link10_side
+{
+	display:none;
+}
+#link4
+{
+	display:none;
+}
+#link5 
+{
+	display:none;
+}
+#link6
+{
+	display:none;
+}
+#link7
+{
+	display:none;
+}
+#link8
+{
+	display:none;
+}
+#link9
+{
+	display:none;
+}
+#link10
+{
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

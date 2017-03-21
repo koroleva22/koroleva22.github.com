@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="keywords" content="Коктебель, жилье, частный сектор, 5 минут от моря, фото, цены, контакты">
+	<meta name="description" content="Снять жилье в частном секторе Коктебеля в 5 минутах ходьбы от моря. Цены, фото и описание жилья 2016.">
+	<meta name="google-site-verification" content="YJQ8KANF0uXd7ItsOVKMaYKOVED4AuNHA2BxZLhdiBs" />
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Коктебель Жилье | Контакты</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>	
+    <link href="alt.css" rel="stylesheet">
+	  <!-- Custom CSS -->
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+	    <script src="js/custom.js"></script>
+	
+	</head>
+  <body id="" style="">
+  <!-- Navigation bar -->
+	  <nav id="myNavbar" class="navbar navbar-inverse col-xs-12" style="margin:0 !important; position: relative; z-index:60; border: none;padding:0;">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a href="#page-top" class=""><img class="navbar-brand" src="images/brand.png" style="padding:0;"/></a>
+		</div>
+		<ul class="nav navbar-nav" style="font-size:16px;">
+		  <li class=""><a href="index.html" class="">О нас</a></li>
+		  <li class=""><a href="rooms.html" class="">Номера</a></li>
+		  <li><a href="prices.html" class="">Цены</a></li>
+		  <li class="active"><a href="contacts.html" >Контакты</a></li>
+		</ul>
+	  </div>
+	</nav>
+	
+	<!-- Form -->
+<div id="contacts" class="container col-xs-12" style="padding:0; margin-top: 20px;background-color: #f0f0f0;">
+	<h1 id="contacts" style="font-size: 25px; margin-top: 10px;margin-bottom: 10px;text-align:center;"><strong>Наши контакты:</strong></h1>
+	<div class="myFlex col-sm-8 col-sm-offset-2" style="display: flex;">
+		<div class="col-xs-12 col-sm-6" style="padding-top: 30px;">
+			<address>
+			<strong>Адрес:</strong><br>
+			ул. Королева 22<br>
+			пгт. Коктебель<br>
+			</address>
+			<address>
+			<strong>Менеджер по заселению:</strong><br>
+			<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			+7 978 8930992<br>
+			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			crimea.ksyusha@mail.ru
+			</address>
+			<address>
+			<strong>Мы в социальных сетях:</strong><br>
+				<a href="https://vk.com/club53547467" target="_blank" rel="nofollow"><img alt="Вконтакте" class="networks" id="first_network" src="images/vk.png" title="Вконтакте"/></a>
+				<a href="http://ok.ru/profile/474728202379" target="_blank" rel="nofollow"><img alt="Одноклассники" class="networks" src="images/ok.png" title="Одноклассники"/></a>
+
+			</address>
+		</div>
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="col-sm-6 col-xs-12" style='overflow:hidden;height:auto;'><div id='gmap_canvas' class="col-sm-12" style='height:400px;'></div><div><small></small></div><div><small></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(44.95713,35.244056099999966),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(44.95713,35.244056099999966)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>пгт. Коктебель<br>Королева 22<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+	</div>
+
+		<form id="myForm" class="col-sm-8 col-sm-offset-2" name="contactform" method="POST">
+				<h2 style="align-items: bottom;font-size: 22px;"><strong>Задайте нам вопрос:</strong></h2>
+						<p class="warnings" id="wrongCaptcha">Неверный код безопасности. Выберите другую картинку и попробуйте еще раз.</p>
+						<p class="warnings" id="wrongEmail">Некорректный email.</p>
+						<p class="warnings" id="wrongName">Некорректное имя.</p>
+						<p class="warnings" id="wrongMessage">Отсутствует текст сообщения.</p>
+						<p style="margin-top:30px;margin-bottom:30px;" id="success">Благодарим за Ваш вопрос! Мы свяжемся с Вами в ближайшее время.</p>
+					<div id="toHide">
+						  <div class="form-group">
+							  <input type="hidden" name="action" value="submit">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" maxlength="50" placeholder="Введите ваш email" class="form-control">
+						  </div>
+						  <div class="form-group">
+							<label for="name">Имя</label>
+							<input type="text" id="name" name="name" maxlength="50" placeholder="Введите Ваше имя" class="form-control">
+						  </div>
+						  <label for="message">Сообщение</label>
+						  <textarea name="message" id="message" class="form-control" maxlength="800" placeholder="Введите сообщение" rows="5"></textarea> 
+						  <script>
+						  var numberOne = Math.floor((Math.random() * (10 - 6 + 1)) + 6);
+						  document.write("Сколько будет " + numberOne);						 
+						  </script>
+						  <img id="action" src="" style="height:15px;width:15px;"/>
+ 						  <script>
+						  var action = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+						  var numberTwo = Math.floor((Math.random() * (5 - 1 + 1)) + 1);
+						  document.write(numberTwo + " ?");
+						  var needed;
+
+						  if (action==1)
+						  {
+							document.getElementById("action").src='images/adi.gif';
+							needed = numberOne + numberTwo;
+						  }
+						  else{
+						  	document.getElementById("action").src='images/sb.gif';
+							needed = numberOne - numberTwo;
+						  }
+						  </script> 
+						  <input type="text" id="numberInput" maxlength="3" style="margin-top:1%;">
+						  <button id="sendMessage" type='button' style="margin-top:1%;" onclick="sendForm()">Отправить!</button>
+					</div>	
+		</form>
+</div>
+
+	
+		<div id="downArtCont" class="container" style="text-align:center;">
+		
+		<p class="col-lg-12" style="padding-top: 20px !important; font-size:25px;">Читайте нас:</p>
+        <div class="col-lg-4 artConts" id="artCont1">
+          <a id="artPicHref1" href="art4.html"><img id="artPic1" class="img-circle" src="art/art4_s.jpg" alt="экскурсия в Коктебеле" width="140" height="140"></a>
+          <p id="artHeader1" class="artHeaders" style="">Конные прогулки в Коктебеле</p>
+          <span id="artText1">В свое время передвижение по Крыму было возможно лишь</span><a id="artHref1" class="readMore" href="art4.html">.....&raquo</a>
+          <p><a id="artHref1" class="btn btn-default" href="art4.html" role="button">Читать &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+		
+        <div class="col-lg-4 artConts" id="artCont2">
+          <a id="artPicHref2" href="art3.html"><img id="artPic2" class="img-circle" src="art/art3_s.jpg" alt="экскурсия в Коктебеле" width="140" height="140"></a>
+          <p id="artHeader2" class="artHeaders" >Под парусами – прогулки на средневековой галере</p>
+          <span id="artText2">Прогулки по морю – любимое развлечение отдыхающих</span><a id="artHref2" class="readMore" href="art3.html">.....&raquo</a>
+          <p><a id="artHref2" class="btn btn-default" href="art3.html" role="button">Читать &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+		
+        <div class="col-lg-4 artConts" id="artCont3">
+          <a id="artPicHref3" href="art1.html"><img id="artPic3" class="img-circle" src="art/art1_s.jpg" alt="экскурсия в Коктебеле" width="140" height="140"></a>
+          <p id="artHeader3" class="artHeaders" >Дайвинг в Коктебеле - отзывы начинающих</p>
+          <span id="artText3">Во многих крупных городах имеются дайвинг-центры</span><a id="artHref3" class="readMore" href="art1.html">.....&raquo</a>
+          <p><a id="artHref3" class="btn btn-default" href="art1.html" role="button">Читать &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+		
+</div><!-- /.row -->
+		<nav id="downArtPagination" style="text-align:center;">
+		<ul class="pagination">
+			<li>
+			  <a class="prevPage" name="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			  </a>
+			</li>
+			<li class="pageLinks active" id="link1" onclick="makeActive('1')"><a name="1">1</a></li>
+			<li class="pageLinks" id="link2" onclick="makeActive('2')"><a name="2">2</a></li>
+			<li class="pageLinks" id="link3" onclick="makeActive('3')"><a name="3">3</a></li>
+			<li class="pageLinks" id="link4" onclick="makeActive('4')"><a name="4">4</a></li>
+			<li class="pageLinks" id="link5" onclick="makeActive('5')"><a name="5">5</a></li>
+			<li class="pageLinks" id="link6" onclick="makeActive('6')"><a name="5">6</a></li>
+			<li class="pageLinks" id="link7" onclick="makeActive('7')"><a name="5">7</a></li>
+			<li class="pageLinks" id="link8" onclick="makeActive('8')"><a name="5">8</a></li>
+			<li class="pageLinks" id="link9" onclick="makeActive('9')"><a name="5">9</a></li>
+			<li class="pageLinks" id="link10" onclick="makeActive('10')"><a name="5">10</a></li>
+			<li>
+			  <a class="nextPage" name="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			  </a>
+			</li>
+		</ul>
+		</nav>
+
+		
+ <footer class="col-xs-12" style="background-color: black; margin-top: 20px; color:white;padding:10px;">
+<p>Developed by Valerii Voronov & Valentyna Voronova</p>
+<p>© Koroleva22 2016</p>
+</footer> 
+
+  	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+	 <script> 
+	 $(document).ready(function() {listPreload("noSide");});
+	 $(document).ready(function() {letArrowsWork();});
+	 </script>
+
+
+  
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+		
+	<!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+	
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter34647350 = new Ya.Metrika({
+                    id:34647350,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/34647350" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78750709-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /Google -->
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2768480", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script>
+<!-- //Rating@Mail.ru counter -->
+
+  </body>
+</html>
+
+
+
+
+
+
