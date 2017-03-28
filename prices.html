@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="keywords" content="Коктебель, жилье, частный сектор, 5 минут от моря, фото, цены, контакты">
-	<meta name="description" content="Снять жилье в частном секторе Коктебеля в 5 минутах ходьбы от моря. Цены, фото и описание жилья 2016.">
+	<meta name="description" content="Снять жилье в частном секторе Коктебеля в 5 минутах ходьбы от моря. Цены, фото и описание жилья 2017.">
 	<meta name="google-site-verification" content="YJQ8KANF0uXd7ItsOVKMaYKOVED4AuNHA2BxZLhdiBs" />
     <link rel="icon" href="images/favicon.ico">
 
     <title>Коктебель Жилье | Цены</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>	
     <link href="alt.css" rel="stylesheet">
 	  <!-- Custom CSS -->
@@ -30,14 +30,22 @@
 		  <a href="#page-top" class="page-scroll"><img class="navbar-brand" src="images/brand.png" style="padding:0;"/></a>
 		</div>
 		<ul class="nav navbar-nav" style="font-size:16px;">
-		  <li class=""><a href="index.html" class="page-scroll">О нас</a></li>
+		  <li class=" dropdown" ><a href="index.html" class="page-scroll dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">О нас</a>
+			<ul class="dropdown-menu">
+				<li><a href="index.html #aboutSection" class="page-scroll">О гостевом доме</a></li>
+				<li><a href="index.html #testimonials" class="page-scroll">Отзывы</a></li>
+				<li><a href="index.html #whyUs" class="page-scroll">Советы туристам</a></li>
+			</ul>
+		  
+		  </li>
 		  <li><a href="rooms.html" >Номера</a></li>
 		  <li class="active"><a href="prices.html">Цены</a></li>
 		  <li><a href="contacts.html">Контакты</a></li>
 		</ul>
 	  </div>
 	</nav>
-	
+		<div id="overlay"></div>
+
 		<!-- Prices -->
 	<div id="prices" class="container col-xs-12"><h1 style="text-align:center;z-index:500;margin-top: 20px;">Наши цены:</h1></div>
 
@@ -171,8 +179,87 @@
 	
 	</div>
 		<img class="col-xs-12 shadow" src="images/shadow.png" alt="">
-<div class="col-xs-12" style="font-size:14px;margin-left: 20px;">* Цены являются ориентировочными, чтобы рассчитать точную стоимость, <a href="contacts.html">напишите нам</a>.</div>
+<div class="col-xs-12" style="font-size:14px;margin-left: 20px;">* Цены являются ориентировочными, чтобы рассчитать точную стоимость, <a href="contacts.html">напишите нам</a> либо <a onclick="setPicker('picker1');openQuery()" style="cursor:pointer;">оставьте заявку.</a></div>
 <div class="col-xs-12" style="margin-top: 15px;font-size:14px;margin-left: 20px;"><strong>Политика бронирования:</strong> бронирование осуществляется после предоплаты за одни сутки проживания. После заселения предоплата будет вычтена из цены.</div>
+
+
+	<div id="query" class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2" style="">
+	<span id="queryExit" class="glyphicon glyphicon-remove" aria-hidden="true" style="position:absolute;text-align:right;font-size:30px;right:5px;z-index:50;" onclick="closeQuery()"></span>
+	<span id="picker1" class="col-xs-6 suitePicker" style="color: grey; padding: 20px; text-align: center; font-size:25px;" onclick="setPicker('picker1')">Стандарт</span>
+	<span id="picker2" class="col-xs-6 suitePicker" style="color: grey; padding: 20px; text-align: center; font-size:25px;" onclick="setPicker('picker2')">Эконом</span>
+		<form action="" style="margin-top:2%;">
+		
+			<span class="col-xs-2 col-xs-offset-1">Дата заезда: </span>
+			<div class="col-xs-3" style="padding:0;"><input class="col-xs-12" id="inp1" type="text" value="dd-mm-yy" onfocus="this.select();lcs(this)"
+			onclick="event.cancelBubble=true;this.select();lcs(this)">
+			</div>
+			
+			<span class="col-xs-2">Дата выезда: </span>
+			<div class="col-xs-3" style="padding:0;"><input id="inp2" class="col-xs-12" type="text" value="dd-mm-yy" onfocus="this.select();lcs(this)"
+			onclick="event.cancelBubble=true;this.select();lcs(this)">
+			</div>
+			<script src="js/calendar.js" type="text/javascript"></script>
+		</form>
+		<span id="" class="col-xs-8 col-xs-offset-2 queryPart" style="color: #11AA11; padding: 10px; text-align: center; font-size:25px;">Количество человек:</span>
+		<span class="col-xs-6 col-sm-2 col-sm-offset-1 fun"><img src="images/fun1.png" style="height:120px;width:120px;" /><p>Взрослые</p></span>
+		<div class="col-xs-6 col-sm-3 inpWrap" style="margin-top:50px;"><input id="inp3" class="col-xs-12" placeholder="Взрослые" type="text" maxlength="2"></div>
+
+		<span class="col-xs-6 col-sm-2 fun"><img src="images/fun2.png" style="height:100px;width:80px;margin-top:20px;" /><p>Дети до 7 лет</p></span>
+		<div class="col-xs-6 col-sm-3 inpWrap" style="margin-top:50px;"><input id="inp4" class="col-xs-12" type="text" maxlength="2" placeholder="Дети до 7 лет"></div>
+		
+		<div id="toHide">
+		<span id="" class="col-xs-8 col-xs-offset-2 queryPart" style="color: #11AA11; padding: 10px; text-align: center; font-size:25px;">Ваши контакты:</span>
+		
+						 <div class="form-group col-xs-6">
+							  <input type="hidden" name="action" value="submit">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" maxlength="50" placeholder="Введите ваш email" class="form-control">
+						  </div>
+						  <div class="form-group col-xs-6">
+							<label for="name">Имя</label>
+							<input type="text" id="name" name="name" maxlength="50" placeholder="Введите Ваше имя" class="form-control">
+						  </div>
+						  <div class="form-group col-xs-12">
+						  <label for="message">Комментарий</label>
+						  <input name="message" id="message" class="form-control" maxlength="800" placeholder="" rows="1"></input> 
+						  <script>
+						  var numberOne = Math.floor((Math.random() * (10 - 6 + 1)) + 6);
+						  document.write("Сколько будет " + numberOne);						 
+						  </script>
+						  <img id="action" src="" style="height:15px;width:15px;"/>
+ 						  <script>
+						  var action = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+						  var numberTwo = Math.floor((Math.random() * (5 - 1 + 1)) + 1);
+						  document.write(numberTwo + " ?");
+						  var needed;
+
+						  if (action==1)
+						  {
+							document.getElementById("action").src='images/adi.gif';
+							needed = numberOne + numberTwo;
+						  }
+						  else{
+						  	document.getElementById("action").src='images/sb.gif';
+							needed = numberOne - numberTwo;
+						  }
+						  </script> 
+						  <input type="text" id="numberInput" maxlength="3" style="margin-top:1%;"><br>
+						  
+						<p class="warnings" id="wrongCaptcha">Неверный код безопасности.</p>
+						<p class="warnings" id="wrongEmail">Некорректный email.</p>
+						<p class="warnings" id="wrongName">Некорректное имя.</p>
+						<p class="warnings" id="wrongDateFormat">Некорректные даты.</p>
+						<p class="warnings" id="wrongCheckIn">Выберите дату заезда.</p>
+						<p class="warnings" id="wrongCheckOut">Выберите дату выезда.</p>
+						<p class="warnings" id="wrongDateOrder">Дата выезда не может быть раньше даты заезда.</p>
+						<p class="warnings" id="wrongAdults">Выберите хотя бы одного взрослого.</p>
+						<p class="warnings" id="wrongPeople">Неверно указано количество человек.</p>
+
+						  <button id="sendMessage" class="btn btn-success btn-lg newButtonRoom" type='button' style="margin-top:1%;display:block !important;" onclick="sendForm(2)">Отправить!</button> </div>
+			</div>
+						 <p class="col-xs-12" style="margin-top:30px;margin-bottom:30px;" id="success">Благодарим за Ваш вопрос! Мы свяжемся с Вами в ближайшее время.</p>
+
+	</div>
 
 	<div id="downArtCont" class="container" style="text-align:center;">
 		
@@ -227,7 +314,7 @@
 		
  <footer class="col-xs-12" style="background-color: black; margin-top: 20px; color:white;padding:10px;">
 <p>Developed by Valerii Voronov & Valentyna Voronova</p>
-<p>© Koroleva22 2016</p>
+<p>© Koroleva22 2017</p>
 </footer> 
 	    <script src="js/custom.js"></script>
 
@@ -248,7 +335,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="js/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
