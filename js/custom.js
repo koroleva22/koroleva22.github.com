@@ -263,6 +263,8 @@ function letArrowsWork()
 		
 		document.getElementById("success").style.display="none";
 		var warnings = document.getElementsByClassName("warnings");
+		document.getElementsById("success") = "none";
+		document.getElementsById("toHide") = "none";
 		for (var i = 0; i < warnings.length; i++) 
 		{
 			warnings[i].style.display="none";
@@ -393,6 +395,7 @@ function closeQuery()
 	document.getElementById("query").style.display="none";
 	document.getElementById("overlay").style.display="none";
 			var warnings = document.getElementsByClassName("warnings");
+			document.getElementsById("success") = "none";
 		for (var i = 0; i < warnings.length; i++) 
 		{
 			warnings[i].style.display="none";
