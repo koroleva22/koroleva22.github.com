@@ -249,12 +249,17 @@ function letArrowsWork()
 	
 	});
 }
-	function sendForm()
+	function sendForm(type)
 	{
+		var errors = 0;
 		var captchaValue = document.getElementById('numberInput').value;
 		var emailValue = document.getElementById('email').value;
 		var nameValue = document.getElementById('name').value;
 		var messageValue = document.getElementById('message').value;
+		var checkInValue = document.getElementById('inp1').value;
+		var checkOutValue = document.getElementById('inp2').value;
+		var adultsValue = document.getElementById('inp3').value;
+		var childValue = document.getElementById('inp4').value;
 		
 		document.getElementById("success").style.display="none";
 		var warnings = document.getElementsByClassName("warnings");
@@ -266,39 +271,158 @@ function letArrowsWork()
 		if(captchaValue != needed)
 		{
 			document.getElementById("wrongCaptcha").style.display="block";
+			errors++;
 		}
 		
 		var reMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(emailValue);
 		if(reMail == false)
 		{
 			document.getElementById("wrongEmail").style.display="block";
+			errors++;
 		}
 		
 		if(nameValue == "")
 		{
 			document.getElementById("wrongName").style.display="block";
+			errors++;
 		}
 		
-		if(messageValue == "")
+		if((type == 1) && (messageValue == ""))
 		{
 			document.getElementById("wrongMessage").style.display="block";
+			errors++;
 		}
 		
-		if(captchaValue != needed || reMail == false || nameValue == "" || messageValue == "") return;
+	if(type == 2){
+		var reDateIn = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkInValue);
+		var reDateOut = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkOutValue);
+
+		if((checkInValue == false) || (checkOutValue == false))
+		{
+			document.getElementById("wrongDateFormat").style.display="block";
+			errors++;
+		}
 		
-		//document.getElementById('myForm').action="http://formspree.io/bilokrynytska@ukr.net";
-		 $.ajax({
-        url: "//formspree.io/bilokrynytska@ukr.net", 
-        method: "POST",
-        data: {message: "E-Mail: " + emailValue + "\n" + "Имя: " + nameValue + "\n" + "Сообщение: " + messageValue},
-        dataType: "json"
-		});
-		document.getElementById("success").style.display="block";
-		document.getElementById("toHide").style.display="none";
+		var dd1 = checkInValue.substring(0, 2);
+		var dd2 = checkOutValue.substring(0, 2);
+		var mm1 = checkInValue.substring(3, 5);
+		var mm2 = checkOutValue.substring(3, 5);
+		var yy1 = checkInValue.substring(6, 10);
+		var yy2 = checkOutValue.substring(6, 10);
+		if(yy2 < yy1)
+		{
+			errors++;
+			document.getElementById("wrongDateOrder").style.display="block";
+		}
+		else
+		{
+			if(mm2 < mm1)
+			{
+				errors++;
+				document.getElementById("wrongDateOrder").style.display="block";
+			}
+			if(mm1 == mm2)
+			{
+				if(dd2 <= dd1)
+				{
+					errors++;
+					document.getElementById("wrongDateOrder").style.display="block";
+				}
+			}
+		}
+		
+	}
+	
+	
+		var reAdults = /^[0-9]*$/.test(adultsValue);
+		var reChild = /^[0-9]*$/.test(childValue);
+		
+		if((reAdults == false) || (reChild == false))
+		{
+			alert(99);
+			document.getElementById("wrongPeople").style.display="block";
+			error++;
+		}
+		else
+		{
+			if(adultsValue <= 0)
+			{
+				document.getElementById("wrongAdults").style.display="block";
+				error++;
+			}
+		}
+
+		if(errors > 0) return;
+		
+		if(type == 1)
+		{
+			$.ajax({
+			url: "//formspree.io/bilokrynytska@ukr.net", 
+			method: "POST",
+			data: {message: "E-Mail: " + emailValue + "\n" + "Имя: " + nameValue + "\n" + "Сообщение: " + messageValue},
+			dataType: "json"
+			});
+			document.getElementById("success").style.display="block";
+			document.getElementById("toHide").style.display="none";
+		}
+		if(type == 2)
+		{
+			$.ajax({
+			url: "//formspree.io/bilokrynytska@ukr.net", 
+			method: "POST",
+			data: {message: "Заезд: " + checkInValue  + "\n" + "Выезд: " + checkOutValue  + "\n" +  "Взрослые: " + adultsValue  + "\n" +  "Дети до 7 лет:" + childValue  + "\n" +  "E-Mail: " + emailValue + "\n" + "Имя: " + nameValue + "\n" + "Сообщение: " + messageValue},
+			dataType: "json"
+			});
+			document.getElementById("success").style.display="block";
+			document.getElementById("toHide").style.display="none";
+		}
 		//document.contactform.submit();
  	}
 	
+function openQuery()
+{
+	document.getElementById("overlay").style.display="block";
+	document.getElementById("query").style.display="block";
+	var body = document.body;
+	var html = document.documentElement;
+	var x = Math.max(body.scrollHeight, body.clientHeight, html.scrollHeight, html.clientHeight);
+	document.getElementById("overlay").style.height = x + "px";
+}
+function closeQuery()
+{
+	document.getElementById("query").style.display="none";
+	document.getElementById("overlay").style.display="none";
+			var warnings = document.getElementsByClassName("warnings");
+		for (var i = 0; i < warnings.length; i++) 
+		{
+			warnings[i].style.display="none";
+		}
+}
 
+
+var activePicker;
+var inactivePicker;
+function setPicker(id)
+{
+	activePicker = id;
+	if(activePicker=="picker1"){inactivePicker="picker2";}
+	else{inactivePicker="picker1"}
+	
+	document.getElementById(inactivePicker).style.color = "grey";
+	document.getElementById(inactivePicker).style.transform = "scale(1)";
+	document.getElementById(activePicker).style.color = "#11AA11";
+	document.getElementById(activePicker).style.transform = "scale(1.6)";
+}
+
+	
+
+	
+	
+	
+	
+	
+	
+	
 
 
 
