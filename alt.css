@@ -61,26 +61,6 @@
 	{
 		width: 100% !important;
 	}
-	.fun
-	{
-		display: none;
-	}
-	#inp3, #inp4
-	{
-		width: 50%; 
-	}
-	.inpWrap
-	{
-		margin:0 !important;
-	}
-	.queryPart, #picker1, #picker2
-	{
-		font-size: 18px !important;
-	}
-	.introStuff
-	{
-		display:none;
-	}
 }
 
 @media (max-width: 884px) and (min-width: 769px)
@@ -108,11 +88,6 @@
 	.btn-success
 	{
 		width: 100% !important;
-	}
-	#gamak
-	{
-		display:none;
-
 	}
 
 }
@@ -146,10 +121,6 @@
 	{
 		width: 100% !important;
 	}
-	.introStuff
-	{
-		display: none;
-	}
  
 }
 
@@ -157,33 +128,6 @@
 body
 {
 	overflow-x: hidden;
-}
-#overlay
-{
-	position: absolute;
- 	display:none;
- 	background-color: black;
-	width:100%;
-	height:2000px;
-	z-index: 100;
-	opacity: 0.7;
-}
-.suitePicker:hover
-{
-	transform: scale(1.6) !important;
-	transition: 0.5s;
-	cursor: default;
-}
-#query
-{
- 	display:none;
-	position: absolute;
- 	background-color: #EEEEEE;
-	border: 2px solid black;
-	height: auto;
-	margin-top: 3%;
-	border-radius: 10px;
-	z-index: 700;
 }
 #myCarousel
 {
@@ -213,6 +157,7 @@ body
 #myNavbar
 {
 	margin:0; 
+	position: relative; 
 	z-index:60; 
 	border: none;
 	padding:0;
@@ -232,48 +177,20 @@ body
 	justify-content: flex-start;
 	margin-top: 15px;
 }
+.carousel-inner > .item {
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
 .cont
 {
 	overflow: hidden;
 }
-#introArt > p
-{
-	text-align: left;
-}
-.newButton
-{
-	border: 2px solid #FF3311;
-	color: #FF3311;
-}
-.newButton:hover
-{
-	border: 2px solid black;
-	color: black !important;
-	transition:  0.5s ease-in-out !important;
- }
 .bigBox
 {
 	background-color: none;
 	z-index: 0;
-}
-#myCarousel6 > ol > li
-{
-	border: 1px solid black;
-}
-#myCarousel6 > ol > .active
-{
-	background-color: black;
-}
-#myCarousel4 > .carousel-inner > .item
-{
-	font-size: 18px;
-	padding-top:100px;
-
-}
-ul.nav > li.dropdown:hover > .dropdown-menu
-{
-	display:block;
-	z-index:40;
 }
 p
 {
@@ -296,11 +213,16 @@ p
 }
 h2
 {
- 	text-align: center;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-items: center;
 	justify-content: center;
- 	font-size: 80px;
+	font-size: 30px;
 	font-weight: bold;
-	font-family: Old Standard TT,Arial,sans-serif;
 }
 #sidebar
 {
@@ -308,7 +230,6 @@ h2
 	z-index: 30;
 	padding-right: 0;
 	text-align: left;
-	top:50px;
 }
 .video
 {
@@ -373,13 +294,6 @@ li:hover
 	box-sizing: padding-box;
 	max-width: none;
 }
-.testim
-{
- 	width: 100%;
-	padding-bottom: 5%;
-	box-sizing: padding-box;
-	max-width: none;
- }
 .phone
 {
 	margin: 0;
@@ -429,10 +343,6 @@ li:hover
 	display: none;
 	color: green;
 
-}
-#queryExit
-{
-	cursor: pointer;
 }
 .priceBox
 {
