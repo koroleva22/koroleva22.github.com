@@ -455,7 +455,7 @@ li:hover
 	display: flex; 
 	align-items: center; 
  }
- .next
+ #myCarousel6 > .carousel-inner > .next
  {
 	top: 64px !important;
  }
