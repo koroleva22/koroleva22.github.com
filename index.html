@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="keywords" content="Коктебель, жилье, частный сектор, 5 минут от моря, фото, цены, контакты">
-	<meta name="description" content="Снять жилье в частном секторе Коктебеля в 5 минутах ходьбы от моря. Цены, фото и описание жилья 2016.">
+	<meta name="keywords" content="Коктебель, Коктебель жилье, Коктебель частный сектор, отдых в Коктебеле частный сектор, Коктебель снять жильё без посредников, Коктебель цены">
+	<meta name="description" content="Снять жилье в частном секторе Коктебеля в 5 минутах ходьбы от моря. Цены, фото и описание жилья 2017.">
 	<meta name="google-site-verification" content="YJQ8KANF0uXd7ItsOVKMaYKOVED4AuNHA2BxZLhdiBs" />
 	 <meta name="yandex-verification" content="544876e47831a6d7" />
     <link rel="icon" href="images/favicon.ico">
@@ -14,8 +14,10 @@
     <title>Коктебель Жилье</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>	
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+
 	<!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 	<link href="alt.css" rel="stylesheet">
@@ -26,13 +28,20 @@
    
 	<body>
 	<!-- Navigation bar -->
-	<nav id="myNavbar" class="navbar navbar-inverse col-xs-12">
+	<nav id="myNavbar" class="navbar navbar-inverse col-xs-12" style="position: fixed;">
 	  <div class="container-fluid">
 		<div class="navbar-header">
 		  <a><img class="navbar-brand" src="images/brand.png" style="padding:0;"/></a>
 		</div>
 		<ul class="nav navbar-nav" style="font-size:16px;">
-		  <li class="active"><a href="#" class="page-scroll">О нас</a></li>
+		  <li class="active dropdown" ><a href="#" class="page-scroll dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">О нас</a>
+			<ul class="dropdown-menu">
+				<li><a href="#aboutSection" class="page-scroll">О гостевом доме</a></li>
+				<li><a href="#testimonials" class="page-scroll">Отзывы</a></li>
+				<li><a href="#whyUs" class="page-scroll">Советы туристам</a></li>
+			</ul>
+		  
+		  </li>
 		  <li><a href="rooms.html" class="page-scroll">Номера</a></li>
 		  <li><a href="prices.html" class="page-scroll">Цены</a></li>
 		  <li><a href="contacts.html" class="page-scroll">Контакты</a></li>
@@ -40,7 +49,9 @@
 	  </div>
 	</nav>
 	<!-- ///*** Navigation bar -->
+		<div id="overlay"></div>
 
+	
 	<div class="container col-xs-12 homepageBox" style="padding: 0 !important;">
 		
 		<!-- Background video -->
@@ -106,32 +117,43 @@
 			<!-- ///*** Sidebar with articles -->
 			
 		<div id="homepage-block-1"></div> 	<!-- White triangle -->
-		<h1 id="koktebel" style="">Коктебель:<br>жилье у моря</h1>
+		<h1  id="koktebel" style="">Коктебель:<br>жилье у моря</h1>
 	</div>
 		
-		
+
 	<!-- About hotel -->
-	<div id="aboutUs" class="myFlex container col-xs-12" style="display: flex; align-items: center; padding:0; margin-top: 30px; background-color: #f0f0f0;">
+<div id="aboutSection" class="col-xs-12" style="overflow-x: hidden !important;">
+	<div class="col-xs-2 " style="">
+ 		<img class="introStuff" src="images/peach.png" style="position: absolute; left:-100px; width: 300px; top: 100px;" />
+ 	</div>
+	<div id="aboutUs" class=" col-xs-8 " style=" align-items: center; padding:0;">
 	
 		<!-- Description-->
-		<div class="col-xs-12 col-sm-6">
-			<img class="arrows arrow1" src="images/3.1.svg" alt=""/>
-			<h2 style="padding-left:5%;padding-right:5%; font-size: 16px; font-family: Arial, sans-serif;">Предлагаем Вам снять жилье в частном секторе Коктебеля. </h2>
-			<p style="padding-top:5%;padding-left:5%;padding-right:5%;"> Гостевой дом "Королева 22" находится в 5 минутах ходьбы от моря и центральной набережной со всей курортной 
-			инфраструктурой. Рядом магазины, мини-рынок, столовая, аптека, банк и т. д.</p>
-			<p style="padding-top:5%;padding-left:5%;padding-right:5%;"> На территории есть стоянка, кухня, мангал. Наших гостей мы бесплатно встречаем на автостанции.</p>
-			<img class="arrows arrow2" src="images/3.1.svg" alt="" />
-		</div>
+		<div id="welcome" style="padding-top:30px !important;"><h2 id="" style="">Добро пожаловать на Королева 22!</h2></div>
+		<h3 style="text-align: center;font-family: 'Bad Script', cursive;">Отдых в Коктебеле без посредников</h3>
+		<p style="padding-top: 5%;padding-left:5%;padding-right:5%; font-size: 16px; font-family: Arial, sans-serif;">Предлагаем Вам снять жилье в частном секторе Коктебеля. </p>
+		<p style="padding-top:5%;padding-left:5%;padding-right:5%;"> Гостевой дом "Королева 22" находится в 5 минутах ходьбы от моря и центральной набережной со всей курортной инфраструктурой. Рядом магазины, мини-рынок, столовая, аптека, банк и т. д. На территории есть автостоянка, кухня, Wi-Fi, зеленый двор с мангалом. Наших гостей мы бесплатно встречаем на автостанции.</p>
+		<p style="padding-top:5%;padding-left:5%;padding-right:5%;">В вашим услугам 7 номеров категории "Стандарт" и 4 номера эконом-класса.</p>
+		<span style="display: flex; margin-left: 0; align-items: center;">
+<!-- 			<a href="prices.html" type="button" class="btn btn-lg newButton col-xs-4 col-sm-3" style="margin-left:auto;margin-right: 5px;block;margin-top:20px;">3D Тур</a>
+ -->			<a href="rooms.html" type="button" class="btn btn-lg newButton col-xs-5 col-sm-4" style="margin-left:auto;margin-right: auto;block;margin-top:20px;">Смотреть номера</a>
+		</span>
 		<!-- ///*** Description-->
+	</div>	
+ 	<div class=" col-xs-2" style="">
+  		<img class="introStuff " src="images/seagull.png" style="position: absolute; right:-100px; width: 300px; top: 100px; z-index:-10;" />
+  	</div>
+ </div>
 		
+<div class="col-xs-12 " style="margin-top: 30px; background-color:black;">
 		<!--Carousel-->
-		<div class="col-xs-12 col-sm-6" style="padding: 0px;">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color:#555555;">
+		<div class="col-xs-8 col-xs-offset-2" style="padding: 0px;">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: black;">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li id="testimonials" data-target="#myCarousel" data-slide-to="2"></li>
 				<li data-target="#myCarousel" data-slide-to="3"></li>
 				<li data-target="#myCarousel" data-slide-to="4"></li>
 				<li data-target="#myCarousel" data-slide-to="5"></li>
@@ -180,10 +202,73 @@
 			  </a>
 			</div>
 		</div>
-		<!-- ///*** Carousel -->
-	</div>
-	<!-- ///*** About hotel -->
+</div>
+		<!-- ///*** Testimonials -->
+<div class="col-xs-12 " style="padding-top:30px;padding-bottom:30px;margin-top: 50px; background-image: url(images/par3.jpg); background-position:cover;background-repeat:no-repeat; background-attachment:fixed; background-position: 15% 30%;">
+		<!--Carousel-->
+		<div class="col-xs-8 col-xs-offset-2" style="padding: 0px;">
+			<div id="myCarousel6" class="carousel slide" data-ride="carousel" style="background-color:rgb(250,250,250,0.85);border: 10px solid rgb(4,4,4,0.1);">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<li data-target="#myCarousel6" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel6" data-slide-to="1"></li>
+				<li id="whyUs" data-target="#myCarousel6" data-slide-to="2"></li>
+			  </ol>
+			  <!-- ///*** Indicators -->
+			  
+			  <!-- Images -->
+			  <div class="carousel-inner" role="listbox" style="">
+				<h2  style="font-size:40px; margin-bottom:0;">Отзывы о нас</h2>
+				<div class="item active horisontal testim" style="top:auto;">
+					<p class="" style="height:400px;display:block;padding:10%; ">Отдыхали здесь, у ребят на Королева 22, в сентябре этого года. Хотим сказать большое спасибо за все! Встретила нас на автовокзале хозяйка Оксана. Очень приветливая, улыбчивая, всегда подскажет куда лучше сходить покушать, где дешевле купить продукты, посоветует по экскурсиям. Номера приятно удивили. Все чисто, удобно. От них до моря очень быстро дойти. Спасибо Вам еще раз! Хотелось бы вернуться!))<br><br>
+					<span style="line-height:20px;"><image src="images/vk.png" style="height:20px;margin-top:-5px;" />&nbsp <a href="https://vk.com/zyshena">Инна Ж.</a></span>
+					</p>
+				</div>
+				
+				<div class="item horisontal testim" style="top:auto;">
+					<p class="" style="height:400px;display:block;padding:10%;">Приезжали с семьей на майских праздниках. Все необходимое есть, свежий ремонт, хороший санузел, интернет. Море близко. Рекомендую.<br><br>
+					<span style="line-height:20px;"><image src="images/vk.png" style="height:20px;margin-top:-5px;" />&nbsp <a href="https://vk.com/id49224131">Сергей Н.</a></span>					
+					</p>
+				</div>
+				
+				<div class="item horisontal testim" style="top:auto;">
+					<p class="" style="height:400px;display:block;padding:10%;">Мы жили в номере с балконом на втором этаже. Видно, что строили совсем недавно, новая отделка, современный стеклянный фасад. Спать тихо и уютно. Очень порадовал кондиционер. Обязательно вернемся в следующем году!!<br><br>
+				<span style="line-height:20px;"><image src="images/ok.png" style="height:20px;margin-top:-5px;" />&nbsp <a href="https://ok.ru/profile/161062879933">Ирина М.</a></span>
+					</p>
+				</div>
+				
+			  </div>
+			</div>
+		</div>
+</div>
+  <!-- ///*** Testimonials -->			  
+	
+	
+	<div id="whyUs" class="col-xs-12" style="margin-top: 30px;padding:15px;">
+		<img id="gamak" class="introStuff" src="images/travel6.png" style="position: absolute; top: -80px;right:0px; width: 300px; " />
+		<img class="introStuff" src="images/travel5.png" style="position: absolute; top: 80px;left:-50px; width: 270px; " />
 
+	  <div id="introArt" class="col-xs-12 col-sm-8 col-sm-offset-2" style="color:black;padding-bottom: 15px;" >
+		<h2 style="font-size:60px;">Как снять недорогое жилье в Коктебеле </h2><h3 style="text-align: center;font-family: 'Bad Script', cursive;">...и не испортить себе отдых</h3>
+		<p>Решив поехать на отдых в Коктебель, каждый в первую очередь стремится снять жильё в соответствии со своими требованиями. Но, к сожалению, несмотря на огромный коктебельский ассортимент, способный, казалось бы, удовлетворить любые запросы, найти комфортное жилье по приемлемым ценам бывает довольно сложно. Мы подготовили для Вас несколько полезных советов, которые помогут Вам определиться с тем, какое жильё подходит Вам больше всего и как Вам найти максимально приближенные к Вашему идеалу варианты. </p>
+
+		<h3>Ищите жильё без посредников</h3>
+
+		<p>Одним из наиболее популярных в Интернете запросов, касающихся Коктебеля, является "Коктебель – снять жильё без посредников". Это связано с тем, что в Коктебеле чрезвычайно развита сеть так называемых "разводящих" – людей, не имеющих собственных номеров и зарабатывающих на расселении отдыхающих по отелям своих партнёров за определенный процент от цены, – поэтому люди, для которых отдых в Коктебеле - занятие ежегодное, стараются снять жильё у непосредственных хозяев. Они не понаслышке знают, что "разводящие" завышают цены для получения более высоких процентов.</p>
+
+		<h3>Частный сектор – то, что нужно</h3>
+
+		<p>Следующий популярный запрос – "отдых в Коктебеле – частный сектор". Ни для кого не секрет, что жильё в частном секторе Коктебеля уже давно не уступает отелям по уровню комфорта и ассортименту услуг. Не говоря уже о кондиционере, холодильнике, москитных сетках на окнах и прочих само собой разумеющихся вещах, такие удобства, как место для стоянки автомобиля, наличие балкона и зеленая территория, давно стали неотъемлемыми атрибутами большинства номеров в частном секторе. Сверх того, пожалуй, самым важным преимуществом частного сектора, конечно же, является цена. Во-первых, в частном жилье количество номеров, которые нужно обслуживать, по сравнению с отелями достаточно небольшое, поэтому владельцы практически не держат персонала. Это позволяет им предлагать отдыхающим более выгодные цены и тем самым привлекать больше клиентов, от чего желающие найти жильё, естественно, только в выигрыше. Во-вторых, в отелях тому же самому персоналу, а именно горничным, официантам, барменам и т. д., для спокойного отдыха часто приходится давать чаевые. Такая перспектива кажется привлекательной немногим.</p>
+
+		<h3>В 2017 году стоит забронировать жильё заранее</h3>
+
+		<p>По данным Госсовета Крыма курортный сезон в Коктебеле в 2017 году обещает быть намного более активным, чем в предыдущие годы. Как сообщается, раннее бронирование жилья в этом сезоне выросло на 20% по сравнению с предыдущим годом. Коктебель, разумеется, сможет предоставить достаточное количество жилья, но наиболее выгодные предложения уже сейчас расходятся, как горячие пирожки, поскольку по-настоящему приемлемых вариантов, сочетающих в себе доступные цены, комфортное жильё и расположение недалеко от моря, не так уж и много. Вы в любой момент можете забронировать у нас номер на интересующий Вас период и быть спокойными, что основа удачного отдыха в Коктебеле – крепкая крыша над головой – у Вас уже в кармане!</p>
+      </div>
+	  <img class="introStuff" src="images/travel1.png" style="position: absolute; bottom: -30px;right:0px; width: 400px; " />
+
+	</div>
+	
+	
 	<!-- Read more containers below -->
 	<div id="downArtCont" class="container" style="display:none; text-align:center;">
 		
@@ -239,13 +324,17 @@
 		</nav>
 	<!-- ///*** Pagination read more containers below-->
 
+
 <footer class="col-xs-12" style="background-color:black; margin-top: 30px; color:white;padding:10px;">
 	<p>Developed by Valerii Voronov & Valentyna Voronova</p>
-	<p>© Koroleva22 2016</p>
+	<p>© Koroleva22 2017</p>
 </footer> 
 
   	<!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+  	<!-- Scroll -->
+    <script src="js/scrollreveal.min.js""></script>
 
 	<script> 
 		$(document).ready(function() {listPreload();});
@@ -257,7 +346,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 		
