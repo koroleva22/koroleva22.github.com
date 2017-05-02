@@ -53,7 +53,7 @@
 		padding:25px;
 	}
 	
-	#koktebel
+	#koktebel, #header2, #header3
 	{
 		font-size: 50px !important;
 	}
@@ -131,7 +131,7 @@
 	{
 		display: block;
 	}
-	#koktebel
+	#koktebel, #header2, #header3
 	{
 		display: block;
 		font-size: 40px !important;
@@ -146,10 +146,15 @@
 	{
 		width: 100% !important;
 	}
-	.introStuff
+	.introStuff, .newButtonRoom, .sendQueryPricesNormal, .testimonials
 	{
 		display: none;
 	}
+	.sendQueryPricesMobile
+	{
+		display: block !important;
+	}
+
  
 }
 
@@ -427,6 +432,11 @@ li:hover
 {
 	cursor: pointer;
 }
+#header3
+{
+	font-size:60px;
+}
+
 .priceBox
 {
 	margin:0; 
@@ -437,6 +447,10 @@ li:hover
 	border-radius: 30px 30px 30px 30px;
 	overflow: hidden;
  
+}
+.sendQueryPricesMobile
+{
+	display: none;
 }
 .pageLinks, .prevPage, .nextPage
 {
@@ -455,7 +469,7 @@ li:hover
 	display: flex; 
 	align-items: center; 
  }
- #myCarousel6 > .carousel-inner > .next
+ .next
  {
 	top: 64px !important;
  }

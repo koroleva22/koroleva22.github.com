@@ -256,18 +256,10 @@ function letArrowsWork()
 		var emailValue = document.getElementById('email').value;
 		var nameValue = document.getElementById('name').value;
 		var messageValue = document.getElementById('message').value;
-		var checkInValue;
-		var checkOutValue;
-		var adultsValue;
-		var childValue;
-		
-		if(type == 2)
-		{
-			 checkInValue = document.getElementById('inp1').value;
-			 checkOutValue = document.getElementById('inp2').value;
-			 adultsValue = document.getElementById('inp3').value;
-			 childValue = document.getElementById('inp4').value;
-		}
+		var checkInValue = document.getElementById('inp1').value;
+		var checkOutValue = document.getElementById('inp2').value;
+		var adultsValue = document.getElementById('inp3').value;
+		var childValue = document.getElementById('inp4').value;
 		
 		document.getElementById("success").style.display="none";
 		var warnings = document.getElementsByClassName("warnings");
@@ -341,7 +333,7 @@ function letArrowsWork()
 			}
 		}
 		
-	
+	}
 	if(yearError == true)
 	{
 		errors++;
@@ -364,7 +356,7 @@ function letArrowsWork()
 				errors++;
 			}
 		}
-	}
+
 		if(errors > 0) return;
 		
 		if(type == 1)
