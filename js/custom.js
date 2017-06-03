@@ -1,4 +1,4 @@
-	 var totalOfArticles = 8;
+	 var totalOfArticles = 9;
 	 var lastExistingPage = 3;
 	 
 	 var href = document.location.href;
