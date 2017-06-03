@@ -469,9 +469,9 @@ li:hover
 	display: flex; 
 	align-items: center; 
  }
- .next
+ #myCarousel6  .next
  {
-	top: 64px !important;
+	top: 64px !important; 
  }
 .myMonths
 {
