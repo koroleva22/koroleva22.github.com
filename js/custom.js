@@ -39,6 +39,7 @@
 			
 			document.getElementById("artPic1"+noneORside).src = "art/art" + (totalOfArticles - postedArticles) + "_s.jpg";
 			document.getElementById("artHref1"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
+			document.getElementById("artReadButton1").href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artPicHref1"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artHeader1"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 			postedArticles++;
@@ -62,6 +63,7 @@
 			
 			document.getElementById("artPic2"+noneORside).src = "art/art" + (totalOfArticles - postedArticles) + "_s.jpg";
 			document.getElementById("artHref2"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
+			document.getElementById("artReadButton2").href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artPicHref2"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artHeader2"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 			postedArticles++;
@@ -85,6 +87,7 @@
 			
 			document.getElementById("artPic3"+noneORside).src = "art/art" + (totalOfArticles - postedArticles) + "_s.jpg";
 			document.getElementById("artHref3"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
+			document.getElementById("artReadButton3").href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artPicHref3"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 			document.getElementById("artHeader3"+noneORside).href = "art" + (totalOfArticles - postedArticles) + ".html";
 
@@ -97,14 +100,14 @@
 			if(p[i].className.length > 9) p[i].className = "pageLinks";
 		}
 		document.getElementById("link" + pageNumber).className = "pageLinks active";
-		loadArticles(pageNumber, '');
 		var articleRegEx = /art\d.html/;
 		if(lastPathSegment == "index.html" || articleRegEx.test(lastPathSegment) || lastPathSegment == "") 
 		{
 			document.getElementById("link" + pageNumber + "_side").className = "pageLinks active";
 			loadArticles(pageNumber, '_side');
 		}
-		
+				loadArticles(pageNumber, '');
+
 	 }
 
 	 
