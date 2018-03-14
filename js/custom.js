@@ -254,15 +254,17 @@ function letArrowsWork()
 }
 	function sendForm(type)
 	{
+		var parentNode;
+		
 		var errors = 0;
 		var captchaValue = document.getElementById('numberInput').value;
 		var emailValue = document.getElementById('email').value;
 		var nameValue = document.getElementById('name').value;
 		var messageValue = document.getElementById('message').value;
-		var checkInValue = document.getElementById('inp1').value;
-		var checkOutValue = document.getElementById('inp2').value;
-		var adultsValue = document.getElementById('inp3').value;
-		var childValue = document.getElementById('inp4').value;
+		var checkInValue;
+		var checkOutValue;
+		var adultsValue;
+		var childValue;
 		
 		document.getElementById("success").style.display="none";
 		var warnings = document.getElementsByClassName("warnings");
@@ -290,13 +292,18 @@ function letArrowsWork()
 			errors++;
 		}
 		
-		if((type == 1) && (messageValue == ""))
+		if((type == 3) && (messageValue == ""))
 		{
 			document.getElementById("wrongMessage").style.display="block";
 			errors++;
 		}
 		
-	if(type == 2){
+	if(type == 2 || type == 1){
+		checkInValue = document.getElementById('inp1').value;
+		checkOutValue = document.getElementById('inp2').value;
+		adultsValue = document.getElementById('inp3').value;
+		childValue = document.getElementById('inp4').value;
+		
 		var reDateIn = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkInValue);
 		var reDateOut = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkOutValue);
 		
@@ -336,7 +343,7 @@ function letArrowsWork()
 			}
 		}
 		
-	}
+	
 	if(yearError == true)
 	{
 		errors++;
@@ -359,10 +366,10 @@ function letArrowsWork()
 				errors++;
 			}
 		}
-
+	}
 		if(errors > 0) return;
 		
-		if(type == 1)
+		if(type == 1 || type == 2)
 		{
 			$.ajax({
 			url: "//formspree.io/bilokrynytska@ukr.net", 
@@ -373,7 +380,7 @@ function letArrowsWork()
 			document.getElementById("success").style.display="block";
 			document.getElementById("toHide").style.display="none";
 		}
-		if(type == 2)
+		if(type == 3)
 		{
 			$.ajax({
 			url: "//formspree.io/bilokrynytska@ukr.net", 
