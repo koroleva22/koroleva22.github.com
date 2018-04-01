@@ -306,10 +306,9 @@ function letArrowsWork()
 		
 		var reDateIn = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkInValue);
 		var reDateOut = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkOutValue);
-		
-		checkDate(checkInValue, checkOutValue);
+	
 
-		if((checkInValue == false) || (checkOutValue == false) || (isdt == false))
+		if((reDateIn == false) || (reDateOut == false))
 		{
 			document.getElementById("wrongDateFormat").style.display="block";
 			errors++;
@@ -369,7 +368,7 @@ function letArrowsWork()
 	}
 		if(errors > 0) return;
 		
-		if(type == 1 || type == 2)
+		if(type == 3)
 		{
 			$.ajax({
 			url: "//formspree.io/bilokrynytska@ukr.net", 
@@ -380,7 +379,7 @@ function letArrowsWork()
 			document.getElementById("success").style.display="block";
 			document.getElementById("toHide").style.display="none";
 		}
-		if(type == 3)
+		if(type == 1 || type == 2)
 		{
 			$.ajax({
 			url: "//formspree.io/bilokrynytska@ukr.net", 
