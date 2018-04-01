@@ -308,11 +308,11 @@ function letArrowsWork()
 		var reDateOut = /^[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(checkOutValue);
 	
 
-		if((reDateIn == false) || (reDateOut == false))
-		{
-			document.getElementById("wrongDateFormat").style.display="block";
-			errors++;
-		}
+		// if((reDateIn == false) || (reDateOut == false))
+		// {
+			// document.getElementById("wrongDateFormat").style.display="block";
+			// errors++;
+		// }
 		
 		var dd1 = checkInValue.substring(0, 2);
 		var dd2 = checkOutValue.substring(0, 2);
